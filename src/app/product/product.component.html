@@ -1,0 +1,37 @@
+<!--<p>product works!</p>
+<table>
+  <tr>
+    <th> id</th>
+    <th> title </th>
+    <th> price</th>
+    <th>quantity</th>
+    <th> like </th>
+
+  </tr>
+  <tr *ngFor="let product of listProduct">
+
+    <th> {{ product.id}} </th>
+    <th> {{ product.title}}   </th>
+    <th> {{product.price}}  </th>
+    <th> {{product.quantity}} </th>
+    <th> {{product.like }}  </th>
+    <button type="button" class="btn btn-primary"> BUY </button>
+    <button type="button" class="btn btn-primary">Like</button>
+
+  </tr>
+
+</table>
+-->
+<th *ngFor="let product of listProduct">
+  <div class="card" style="width: 18rem;" >
+  <img class="card-img-top" src="assets/img/{{product.title}}.jpg" alt="Card image cap">
+  <div  class="card-body"  >
+
+    <h5 class="card-title">{{product.title}}</h5>
+    <p class="card-text"> ID: {{product.id}}</p>
+    <p class="card-text"> ID: {{product.price}}</p>
+    <p class="card-text">Quantity : {{product.quantity}}</p>
+    <a href="#" class="btn btn-primary">buy!</a>
+    <a href="#" class="btn btn-primary">like</a>
+  </div>
+  </div></th>
