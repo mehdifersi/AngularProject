@@ -1,0 +1,42 @@
+<!--<p>product works!</p>
+<table>
+  <tr>
+    <th> id</th>
+    <th> title </th>
+    <th> price</th>
+    <th>quantity</th>
+    <th> like </th>
+
+  </tr>
+  <tr *ngFor="let product of listProduct">
+
+    <th> {{ product.id}} </th>
+    <th> {{ product.title}}   </th>
+    <th> {{product.price}}  </th>
+    <th> {{product.quantity}} </th>
+    <th> {{product.like }}  </th>
+    <button type="button" class="btn btn-primary"> BUY </button>
+    <button type="button" class="btn btn-primary">Like</button>
+
+  </tr>
+
+</table>
+-->
+<input type="text" value="" name="nomEntreprise" [(ngModel)]="nomEntreprise"  />
+<div class="row">
+  <div class="col-md-4" *ngFor="let offre of listOffreEmploi,let i=index">
+    <div *ngIf="nomEntreprise==offre.entreprise||nomEntreprise==null">
+
+          <h5 class="card-title">{{offre.titre}}</h5>
+          <p class="card-text"> ENTREPRISE: {{offre.entreprise}}</p>
+          <p class="card-text"> REFERENCE: {{offre.reference}}</p>
+          <p class="card-text">ETAT : {{offre.etat}}</p>
+
+          <button href="#" class="btn btn-primary"  [disabled]="offre.etat==false" >POSTULER</button>
+        </div>
+      </div>
+  <button href="#" class="btn btn-primary" (click)="bilan()" >BILAN</button>
+  <h3>{{bilan()}}</h3>
+</div>
+
+
