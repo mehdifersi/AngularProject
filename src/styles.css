@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+#info-block section {
+  border: 2px solid black;
+  height: 200px;
+}
+
+.file-marker > div {
+  padding: 0 3px;
+  height: 100px;
+  margin-top: -0.8em;
+
+}
+.box-title {
+  background: white none repeat scroll 0 0;
+  display: inline-block;
+  padding: 0 2px;
+  margin-left: 8em;
+}

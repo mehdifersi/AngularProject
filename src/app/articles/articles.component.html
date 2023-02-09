@@ -1,0 +1,21 @@
+<h1>{{titre}}</h1>
+<input type="text" value="{{nbrArticle()}}" name="price"   />
+<div class="row">
+<aside id="info-block" class="col-md-4" *ngFor="let article of listeArticles,let i=index">
+  <section class="file-marker" *ngIf="article.categorie!='Travail'" >
+    <div >
+      <div class="box-title">
+        {{article.titre}}
+      </div>
+      <p>Auteur : {{article.auteur}}</p>
+      <p>DATE : {{article.date}}</p>
+      <p>CONTENU : {{article.contenu}}</p>
+      <p>Categotrie : {{article.categorie}}</p>
+      <div class="box-contents" >
+        <div id="audit-trail">
+        </div>
+      </div>
+    </div>
+  </section>
+</aside>
+</div>
