@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Product} from "../core/model/product";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-product',
@@ -12,6 +13,7 @@ export class ProductComponent implements OnInit{
   test:boolean=true
   priceMax!:number;
   constructor() {
+
   }
   ngOnInit():void {
     this.listProduct=[
@@ -26,4 +28,5 @@ export class ProductComponent implements OnInit{
   incremente(i:number){
     this.listProduct[i].like++;
   }
+
 }

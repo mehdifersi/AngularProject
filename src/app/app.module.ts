@@ -9,6 +9,8 @@ import {FormsModule} from "@angular/forms";
 import { OffresEmploiComponent } from './offres-emploi/offres-emploi.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { DetailProductComponent } from './detail-product/detail-product.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     HomeComponent,
     OffresEmploiComponent,
     ArticlesComponent,
-    NavbarComponent
+    NavbarComponent,
+    NotFoundComponent,
+    DetailProductComponent
   ],
   imports: [
     BrowserModule,
