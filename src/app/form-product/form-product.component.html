@@ -1,0 +1,29 @@
+<form #f="ngForm">
+  <div class="form-group">
+    <label>ID</label>
+    <input type="number" name="id" class="form-control" #id="ngModel" [(ngModel)] ="p.id"  placeholder="Id" required>
+    <p class="alert alert-danger" *ngIf="id.invalid &&title.touched"> id is required </p>
+
+  </div>
+  <div class="form-group">
+    <label >TITLE</label>
+    <input type="text" name="title" class="form-control" #title="ngModel" [(ngModel)]="p.title"   placeholder="title" required minlength="3">
+    <p class="alert alert-danger" *ngIf="title.invalid &&title.touched"> title is required </p>
+  </div>
+  <div class="form-group">
+    <label >PRICE</label>
+    <input type="number" name="price" class="form-control" [(ngModel)]="p.price"    placeholder="price" >
+  </div>
+  <div class="form-group">
+    <label >QIANTITY</label>
+    <input type="number" name="quantity" class="form-control" #quantity="ngModel" [(ngModel)]="p.quantity"   placeholder="quantity"  min="100">
+    <p class="alert alert-danger" *ngIf="quantity.invalid"> quantité minimal est 100 </p>
+  </div>
+ <!-- <form>
+    <div class="form-group">
+      <label for="exampleFormControlFile1">Product Image </label>
+      <input type="file" class="form-control-file" id="exampleFormControlFile1">
+    </div>
+  </form>-->
+  <button type="submit" class="btn btn-primary" (click)="get(p)" [disabled]="f.invalid">Submit</button>
+</form>
