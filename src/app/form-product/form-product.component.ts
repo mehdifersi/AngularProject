@@ -10,7 +10,6 @@ import {ProductServiceTsService} from "../service/product-service.ts.service";
 export class FormProductComponent implements OnInit{
   p!:Product
   constructor(private ps:ProductServiceTsService) {
-  this.ps.listProduct
   }
 
 
@@ -19,5 +18,7 @@ export class FormProductComponent implements OnInit{
   }
   get(p:Product){
     console.log(p)
+    this.ps.listProduct.push(p)
+    console.log(this.ps.listProduct);
   }
 }
