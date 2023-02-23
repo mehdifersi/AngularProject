@@ -7,7 +7,7 @@
   </div>
   <div class="form-group">
     <label >TITLE</label>
-    <input type="text" name="title" class="form-control" #title="ngModel" [(ngModel)]="p.title"   placeholder="title" required minlength="3"">
+    <input type="text" name="title" class="form-control" #title="ngModel" [(ngModel)]="p.title"   placeholder="title" required minlength="3">
     <p class="alert alert-danger" *ngIf="title.invalid &&title.touched"> title is required </p>
   </div>
   <div class="form-group">

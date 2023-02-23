@@ -1,8 +1,15 @@
 #info-block section {
   border: 2px solid black;
-  height: 200px;
+  height: 400px;
+  margin-top: 20px;
+margin-left:25px ;
 }
-
+#info-block2 section {
+  border: 2px solid black;
+  height: 250px;
+  margin-top: 20px;
+  width: 400px;
+}
 .file-marker > div {
   padding: 0 3px;
   height: 100px;
@@ -14,4 +21,11 @@
   display: inline-block;
   padding: 0 2px;
   margin-left: 8em;
+  margin-bottom: 10px;
+}
+td{
+  margin-bottom: 20px;
+}
+#boutton{
+  margin: 10px 10px 10px 10px;
 }

@@ -8,6 +8,7 @@ import {NotFoundError} from "rxjs";
 import {NotFoundComponent} from "./not-found/not-found.component";
 import {DetailProductComponent} from "./detail-product/detail-product.component";
 import {FormProductComponent} from "./form-product/form-product.component";
+import {TemplateDrivenFormComponent} from "./template-driven-form/template-driven-form.component";
 
 const routes: Routes = [
   {path:'',redirectTo:'products',pathMatch:"full"},
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path:'ajoutProduit',component:FormProductComponent},
   {path:'offres-emploi',component:OffresEmploiComponent},
   {path:'detailProduct/:id',component:DetailProductComponent},
+  {path : 'templateFormDriven',component:TemplateDrivenFormComponent},
   {path:'**',component:NotFoundComponent}
 ];
 
