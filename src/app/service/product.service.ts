@@ -4,7 +4,7 @@ import {Product} from "../core/model/product";
 @Injectable({
   providedIn: 'root'
 })
-export class ProductServiceTsService implements OnInit{
+export class ProductService implements OnInit{
   listProduct!:Product[]
 
   constructor() {
@@ -17,5 +17,8 @@ export class ProductServiceTsService implements OnInit{
   ngOnInit(): void {
     console.log(this.listProduct)
   }
+
+
+
 
   }

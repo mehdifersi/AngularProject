@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Product} from "../core/model/product";
 import {ActivatedRoute} from "@angular/router";
+import {MethodePartageService} from "../service/methode-partage.service";
 
 @Component({
   selector: 'app-product',
@@ -12,7 +13,8 @@ export class ProductComponent implements OnInit{
   listProduct!:Product[]
   test:boolean=true
   priceMax!:number;
-  constructor() {
+  stock!:number;
+  constructor(private  mp:MethodePartageService) {
 
   }
   ngOnInit():void {
@@ -28,5 +30,8 @@ export class ProductComponent implements OnInit{
   incremente(i:number){
     this.listProduct[i].like++;
   }
+  calculnombre(){
 
+    this.stock=this.mp.calculnombre("quantity",this.listProduct,0)
+  }
 }

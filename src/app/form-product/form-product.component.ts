@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Product} from "../core/model/product";
-import {ProductServiceTsService} from "../service/product-service.ts.service";
+import {ProductService} from "../service/product.service";
 
 @Component({
   selector: 'app-form-product',
@@ -9,7 +9,7 @@ import {ProductServiceTsService} from "../service/product-service.ts.service";
 })
 export class FormProductComponent implements OnInit{
   p!:Product
-  constructor(private ps:ProductServiceTsService) {
+  constructor(private ps:ProductService) {
   }
 
 

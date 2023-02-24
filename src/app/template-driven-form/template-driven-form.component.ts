@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ProductServiceTsService} from "../service/product-service.ts.service";
+import {ProductService} from "../service/product.service";
 import {Formulaire} from "../core/model/formulaire";
 
 @Component({
@@ -10,7 +10,7 @@ import {Formulaire} from "../core/model/formulaire";
 export class TemplateDrivenFormComponent implements OnInit {
   form!:Formulaire
   constructor() {
-    this.form=new Formulaire()
+    this.form=new Formulaire();
   }
   ngOnInit(): void {
   }

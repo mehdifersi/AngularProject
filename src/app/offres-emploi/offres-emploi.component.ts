@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Emploi} from "../core/model/emploi";
+import {MethodePartageService} from "../service/methode-partage.service";
 
 @Component({
   selector: 'app-offres-emploi',
@@ -9,6 +10,9 @@ import {Emploi} from "../core/model/emploi";
 export class OffresEmploiComponent implements OnInit{
   listOffreEmploi!:Emploi[]
   nomEntreprise!:string
+  offreOFF!:number
+  constructor(private mp:MethodePartageService) {
+  }
   ngOnInit(): void {
     this.listOffreEmploi=[
       {reference:"emp1",titre:"software engineer",entreprise:"OnCode",etat:true },
@@ -25,6 +29,8 @@ export class OffresEmploiComponent implements OnInit{
     }
     return i
   }
-
+  calculnombre(){
+    this.offreOFF =this.mp.calculnombre("etat",this.listOffreEmploi,false)
+  }
 
 }

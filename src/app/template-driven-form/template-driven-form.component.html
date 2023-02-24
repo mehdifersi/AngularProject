@@ -7,11 +7,11 @@
           Informations Générales
         </div>
         <table>
-        <tr><td> <label>Nom :  </label> </td> <td><input type="text"  #nom="ngModel" [(ngModel)]="form.nom"  required ></td></tr>
-          <p class="alert alert-danger" *ngIf="nom.invalid &&nom.touched"> Nom is required </p>
-        <tr><td> <label>Email :  </label> </td> <td><input type="email"  #email="ngModel" [(ngModel)]="form.email" required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]{3}+\.[a-z]$"></td></tr>
-          <tr><p class="alert alert-danger" *ngIf="email.invalid &&email.touched"> Email is required </p></tr>
-          <tr><p class="alert alert-danger" *ngIf="email.invalid &&email.touched"> il faut avoir 3 caractères après l’@ </p></tr>
+        <tr><td> <label>Nom :  </label> </td> <td><input type="text" name="nom" #nom="ngModel" [(ngModel)]="form.nom"  required ></td></tr>
+          <div class="alert alert-danger" *ngIf="nom.invalid && nom.touched"> Nom is required </div>
+        <tr><td> <label>Email :  </label> </td> <td><input type="email" name="email"   #email="ngModel" [(ngModel)]="form.email" required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]{3}+\.[a-z]$"></td></tr>
+          <tr><p class="alert alert-danger" *ngIf="email.invalid && email.touched"> Email is required </p></tr>
+          <tr><p class="alert alert-danger" *ngIf="email.invalid && email.touched"> il faut avoir 3 caractères après l’@ </p></tr>
         </table>
           <!-- Second div -->
         <form #formPayement="ngForm">
@@ -23,13 +23,13 @@
                   Informations de Payement
                 </div>
                 <table>
-                <tr><td> <label>Type de carte :  </label> </td> <td><input type="text" #typeCarte="ngModel"[(ngModel)]="form.typeCarte" required></td></tr>
+                <tr><td> <label>Type de carte :  </label> </td> <td><input type="text" name="typeCarte"  #typeCarte="ngModel"[(ngModel)]="form.typeCarte" required></td></tr>
                   <p class="alert alert-danger" *ngIf="typeCarte.invalid &&typeCarte.touched"> Type carte is required </p>
-                <tr><td> <label>Numero de carte  :  </label> </td> <td><input type="text" #numCarte="ngModel"[(ngModel)]="form.numCarte" required maxlength="16" minlength="16"></td></tr>
+                <tr><td> <label>Numero de carte  :  </label> </td> <td><input type="text" name="numCarte"  #numCarte="ngModel"[(ngModel)]="form.numCarte" required maxlength="16" minlength="16"></td></tr>
                   <p class="alert alert-danger" *ngIf="numCarte.invalid &&numCarte.touched"> num carte  is required and doit contenir 16 numero </p>
-                <tr><td> <label>Date expiration :  </label> </td> <td><input type="text" #dateExpiration="ngModel" [(ngModel)]="form.dateExpiration"  required></td></tr>
+                <tr><td> <label>Date expiration :  </label> </td> <td><input type="text" name="dateExpiration"  #dateExpiration="ngModel" [(ngModel)]="form.dateExpiration"  required></td></tr>
                   <p class="alert alert-danger" *ngIf="dateExpiration.invalid &&dateExpiration.touched"> Date Expiration  is required  </p>
-                <tr><td> <label>Code :  </label> </td> <td><input type="text" #code="ngModel"  [(ngModel)]="form.code"   ></td></tr>
+                <tr><td> <label>Code :  </label> </td> <td><input type="text" name="code"  #code="ngModel"   [(ngModel)]="form.code"   ></td></tr>
                 </table>
                   <div class="box-contents" >
                   <div class="audit-trail">
@@ -51,3 +51,4 @@
   </aside>
 </div>
 </form>
+{{form.nom}}
