@@ -13,6 +13,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { DetailProductComponent } from './detail-product/detail-product.component';
 import { FormProductComponent } from './form-product/form-product.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import {HttpClientModule} from "@angular/common/http";
+import { ProductItemComponent } from './product-item/product-item.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +27,14 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
     NotFoundComponent,
     DetailProductComponent,
     FormProductComponent,
-    TemplateDrivenFormComponent
+    TemplateDrivenFormComponent,
+    ProductItemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

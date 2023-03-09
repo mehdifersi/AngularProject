@@ -38,7 +38,9 @@
 
     <button href="#" class="btn btn-primary" (click)="decremente(i)" [disabled]="product.quantity==0" >buy!</button>
     <button href="#" class="btn btn-primary" (click)="incremente(i)">like</button>
+    <button href="#" class="btn btn-primary" (click)="delete(product.id)">DELETE</button>
     <button  class="btn btn-primary"   [routerLink]="['/detailProduct', product.id]">Detail</button>
+
 
 
   </div>

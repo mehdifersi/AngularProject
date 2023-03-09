@@ -1,0 +1,23 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "products": [
+    {
+      "id": 5,
+      "title": "tttt",
+      "price": 50,
+      "quantity": 100
+    },
+    {
+      "id": 6,
+      "title": "ahla",
+      "price": 50,
+      "quantity": 1000
+    }
+  ]
+}
